@@ -1,0 +1,49 @@
+name: Sync NVIDIA upstream
+
+on:
+  schedule:
+    # Runs daily at 00:17 UTC (06:17 Asia/Dhaka).
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-nvidia-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Merge upstream changes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Torve main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch NVIDIA upstream
+        run: |
+          git remote add upstream https://github.com/NVIDIA/skills.git
+          git fetch upstream main --prune
+
+      - name: Merge and push new upstream commits
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "Torve main already contains the latest NVIDIA upstream commit."
+            exit 0
+          fi
+
+          git merge --no-edit upstream/main
+          git push origin HEAD:main

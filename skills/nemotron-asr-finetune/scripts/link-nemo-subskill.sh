@@ -20,7 +20,7 @@
 # `nemo-speech-asr-finetune` is a project-local Claude Code skill that lives
 # inside the NeMo/Speech repo itself (.claude/skills/nemo-speech-asr-finetune),
 # not the nvidia-skills catalog, so it is not installable with the standard
-# `npx skills add nvidia/skills --skill ...` flow. Try that installer against
+# `npx skills add Torve-Ai/skills --skill ...` flow. Try that installer against
 # the owning repo first:
 #
 #   npx skills add NVIDIA-NeMo/Speech --skill nemo-speech-asr-finetune \

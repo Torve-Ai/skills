@@ -27,10 +27,10 @@ Mitigation: Review and scan skill before deployment. <br>
 ## Reference(s): <br>
 - [Hermes Agent: Catalog Lookup and Install](references/hermes-catalog.md) <br>
 - [NVIDIA Taxonomy Routing](references/taxonomy-routing.md) <br>
-- [NVIDIA Skills catalog (GitHub)](https://github.com/NVIDIA/skills/tree/main/skills) <br>
+- [Torve Skills catalog (GitHub)](https://github.com/Torve-Ai/skills/tree/main/skills) <br>
 - [NVIDIA Skills on build.nvidia.com](https://build.nvidia.com/skills) <br>
-- [NVIDIA Skills catalog index (skills.sh.json)](https://raw.githubusercontent.com/NVIDIA/skills/main/skills.sh.json) <br>
-- [NVIDIA Skills marketplace metadata](https://raw.githubusercontent.com/NVIDIA/skills/main/.github/scripts/marketplace/metadata.json) <br>
+- [Torve Skills catalog index (skills.sh.json)](https://raw.githubusercontent.com/Torve-Ai/skills/main/skills.sh.json) <br>
+- [Torve Skills marketplace metadata](https://raw.githubusercontent.com/Torve-Ai/skills/main/.github/scripts/marketplace/metadata.json) <br>
 
 
 ## Skill Output: <br>

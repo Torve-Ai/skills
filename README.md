@@ -1,11 +1,11 @@
 <!-- SPDX-License-Identifier: Apache-2.0 AND CC-BY-4.0 -->
 <!-- Copyright (c) 2026 NVIDIA Corporation. All rights reserved. -->
 
-# NVIDIA Agent Skills
+# Torve Agent Skills
 
-**Official, NVIDIA-verified Agent Skills for Claude Code, Codex, and other coding agents.**
+**A Torve-maintained catalog of Agent Skills for Claude Code, Codex, and other coding agents.**
 
-[![NVIDIA](https://img.shields.io/badge/NVIDIA-Verified-76B900?style=flat&logo=nvidia&logoColor=white)](https://nvidia.com)
+[![Torve](https://img.shields.io/badge/Torve-Agent%20Skills-6C47FF?style=flat)](https://github.com/Torve-Ai/skills)
 [![Agent Skills Spec](https://img.shields.io/badge/Agent%20Skills-Specification-blue)](https://agentskills.io)
 [![License](https://img.shields.io/badge/License-Apache%202.0%20%2B%20CC--BY--4.0-green.svg)](#license)
 
@@ -15,21 +15,21 @@
 
 ---
 
-Skills are portable instruction sets that teach AI agents how to use NVIDIA software optimally: Physical AI and robotics workflows, simulation, CUDA-X libraries, RAG and AI Blueprints, and platform tools. This repository is a catalog: skills are maintained in their respective product repos, and mirrored here daily via an automated sync pipeline. Skills are being added continuously, so check back for updates. We are building this infrastructure in the open, and contributions are welcome. See the [Roadmap](#roadmap) for what is planned next.
+Skills are portable instruction sets that teach AI agents how to complete specialized workflows. Torve maintains this catalog as a user-friendly fork of the [NVIDIA Agent Skills repository](https://github.com/NVIDIA/skills), including Physical AI, robotics, simulation, CUDA-X, RAG, AI Blueprints, and platform tooling. A scheduled GitHub Action syncs new upstream changes into this repository every day while Torve-specific installation guidance remains here for our users.
 
 ---
 
 ## Quickstart
 
-Install NVIDIA skills with the default [`skills` CLI](https://github.com/vercel-labs/skills) flow. The NVIDIA Skill Finder skill will search this catalog and help you discover the right skill for your use case.
+Install a Torve skill with the default [`skills` CLI](https://github.com/vercel-labs/skills) flow. For example, install the RAG Blueprint skill with:
 
 ```bash
-npx skills add nvidia/skills --skill nvidia-skill-finder --yes
+npx skills add Torve-Ai/skills --skill rag-blueprint
 ```
 
-This installs the skill finder, which can then find and install other skills for you. To browse the full catalog instead, run `npx skills add nvidia/skills`. You do not need to clone this repo or copy skill folders by hand.
+Replace `rag-blueprint` with any skill name from the [Skill Catalog](#skill-catalog). To browse the full catalog, run `npx skills add Torve-Ai/skills --list`. You do not need to clone this repo or copy skill folders by hand.
 
-> **Requires a current `skills` CLI (v1.5.16 or newer).** Installing via `npx skills@latest add nvidia/skills` always uses the latest. On older CLIs (v1.5.15 and earlier), skills may install but not appear in Claude Code — see [Troubleshooting](docs/advanced-install.mdx#troubleshooting).
+> **Requires a current `skills` CLI (v1.5.16 or newer).** Installing via `npx skills@latest add Torve-Ai/skills` always uses the latest. On older CLIs (v1.5.15 and earlier), skills may install but not appear in Claude Code — see [Troubleshooting](docs/advanced-install.mdx#troubleshooting).
 
 The skill is available the next time your agent loads skills and encounters a relevant task. For example, ask your agent to "solve a linear programming problem with cuOpt" and the skill guides it through the cuOpt Python API. In Claude Code, run `/reload-skills` to load newly installed skills in your current session.
 
@@ -38,7 +38,7 @@ The skill is available the next time your agent loads skills and encounters a re
 Use this when you already know the skill name and want to skip prompts.
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --yes
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --yes
 ```
 
 Replace `cuopt-numerical-optimization-api` with any skill name from the [Skill Catalog](#skill-catalog).
@@ -50,37 +50,37 @@ Use `--agent` to target a specific AI coding agent. Initially, we'll support com
 **Claude Code**
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent claude-code
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent claude-code
 ```
 
 **Codex**
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent codex
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent codex
 ```
 
 **Snowflake CoCo**
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent cortex
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent cortex
 ```
 
 **Cursor**
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent cursor
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent cursor
 ```
 
 **Kiro**
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent kiro-cli
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent kiro-cli
 ```
 
 Use `--agent` more than once to install the same skill into multiple agents.
 
 ```bash
-npx skills add nvidia/skills \
+npx skills add Torve-Ai/skills \
   --skill cuopt-numerical-optimization-api \
   --agent claude-code \
   --agent codex \
@@ -100,10 +100,10 @@ Run it interactively and the CLI also flags skills that were removed or merged u
 
 ### Browse the Catalog
 
-Use this when you want to see available NVIDIA skills before installing anything.
+Use this when you want to see available Torve skills before installing anything.
 
 ```bash
-npx skills add nvidia/skills --list
+npx skills add Torve-Ai/skills --list
 ```
 
 For non-interactive installs, global installs, agent-specific installs, updates, removals, and fallback manual copying, see [Advanced installation](docs/advanced-install.mdx).
@@ -318,7 +318,7 @@ See [Verify Signed Agent Skills](docs/signing-agent-skills.mdx) for signature la
 ## Repository Structure
 
 ```
-NVIDIA/skills/
+Torve-Ai/skills/
 ├── skills/                      # NVIDIA-verified skills (count grows continuously),
 │   │                              synced from upstream product repos
 │   ├── README.md                 # Browser-facing install guidance

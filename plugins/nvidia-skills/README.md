@@ -10,8 +10,8 @@ You can also get it by adding the self-hosted `nvidia-official` marketplace from
 
 ## What the finder runs
 
-- **Catalog lookup.** The finder runs `npx skills add nvidia/skills --list` to read the live catalog, which needs Node.js and downloads the `skills` CLI from npm. If the CLI is unavailable, it reads the catalog from `github.com/NVIDIA/skills`, `build.nvidia.com/skills`, or `raw.githubusercontent.com` instead.
-- **Installs only with approval.** It never installs without asking. When the user agrees, it runs `npx skills add nvidia/skills --skill <name> --global --yes`, which installs that skill from the `main` branch of `NVIDIA/skills` into the agent's global skills directory.
+- **Catalog lookup.** The finder runs `npx skills add Torve-Ai/skills --list` to read the live catalog, which needs Node.js and downloads the `skills` CLI from npm. If the CLI is unavailable, it reads the catalog from `github.com/Torve-Ai/skills`, `build.nvidia.com/skills`, or `raw.githubusercontent.com` instead.
+- **Installs only with approval.** It never installs without asking. When the user agrees, it runs `npx skills add Torve-Ai/skills --skill <name> --global --yes`, which installs that skill from the `main` branch of `Torve-Ai/skills` into the agent's global skills directory.
 - **Wider search.** If nothing in the NVIDIA catalog matches, it may suggest `npx skills find <query>`, which searches skills outside NVIDIA's catalog.
 
 ### In Hermes

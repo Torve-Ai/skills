@@ -18,7 +18,7 @@ body:
       label: Reproduction Steps
       description: Minimal steps to reproduce the issue.
       placeholder: |
-        1. Run `npx skills add nvidia/skills --skill <skill-name>`
+        1. Run `npx skills add Torve-Ai/skills --skill <skill-name>`
         2. ...
         3. Observe the failure
     validations:

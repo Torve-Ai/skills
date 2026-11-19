@@ -109,7 +109,7 @@ validator uses only the Python standard library.
 From the root of **your agent's repository**, run:
 
 ```bash
-npx skills@latest add nvidia/skills \
+npx skills@latest add Torve-Ai/skills \
   --skill ethos-orchestrate \
   --skill ethos-explore \
   --skill ethos-write \

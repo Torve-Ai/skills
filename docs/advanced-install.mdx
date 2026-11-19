@@ -1,6 +1,6 @@
 ---
 title: "Advanced Installation"
-description: "Install, update, and remove NVIDIA skills with control over agent, scope, and non-interactive workflows."
+description: "Install, update, and remove Torve skills with control over agent, scope, and non-interactive workflows."
 ---
 
 Use this guide when you need more control than the root README quickstart: non-interactive installs, specific agents, global vs project scope, updates, removals, or a manual fallback.
@@ -9,13 +9,13 @@ Use this guide when you need more control than the root README quickstart: non-i
 
 - Node.js and npm available on your PATH. The examples use `npx`, which ships with npm.
 - A current `skills` CLI — **version 1.5.16 or newer**. Running via `npx skills@latest` always uses the latest. Versions 1.5.15 and earlier do not create the Claude Code skills link, so installed skills won't appear in Claude Code (Codex and other agents that read `.agents/skills/` directly are unaffected).
-- Access to `https://github.com/NVIDIA/skills`.
+- Access to `https://github.com/Torve-Ai/skills`.
 - An AI agent that supports Agent Skills, such as Claude Code, Codex, Cursor, OpenCode, Windsurf, Gemini CLI, or another compatible agent.
 
 ## List Skills Before Installing
 
 ```bash
-npx skills add nvidia/skills --list
+npx skills add Torve-Ai/skills --list
 ```
 
 Use this when you want to inspect the catalog before selecting a skill.
@@ -23,7 +23,7 @@ Use this when you want to inspect the catalog before selecting a skill.
 ## Install One Skill
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api
 ```
 
 Use the skill name from the `name:` field in the skill's `SKILL.md`. In this catalog, names usually match the leaf folder under `skills/<product>/`.
@@ -31,15 +31,15 @@ Use the skill name from the `name:` field in the skill's `SKILL.md`. In this cat
 ## Install to a Specific Agent
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent codex
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent claude-code
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api --agent cursor
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent codex
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent claude-code
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api --agent cursor
 ```
 
 You can pass `--agent` more than once:
 
 ```bash
-npx skills add nvidia/skills \
+npx skills add Torve-Ai/skills \
   --skill cuopt-numerical-optimization-api \
   --agent codex \
   --agent claude-code
@@ -50,13 +50,13 @@ npx skills add nvidia/skills \
 Project installs are the default. They place links under the current project's agent-specific skills directory so the skills travel with that project.
 
 ```bash
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api
 ```
 
 Global installs make the skill available across projects for the selected agent:
 
 ```bash
-npx skills add nvidia/skills \
+npx skills add Torve-Ai/skills \
   --skill cuopt-numerical-optimization-api \
   --agent codex \
   --global
@@ -67,7 +67,7 @@ npx skills add nvidia/skills \
 Use `--yes` when scripting setup or bootstrapping a development environment:
 
 ```bash
-npx skills add nvidia/skills \
+npx skills add Torve-Ai/skills \
   --skill cuopt-numerical-optimization-api \
   --agent codex \
   --global \

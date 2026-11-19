@@ -1,11 +1,11 @@
 {
-    "name": "nvidia-official",
+    "name": "torve-skills",
     "owner": {
-        "name": "NVIDIA",
-        "url": "https://github.com/NVIDIA/skills"
+        "name": "Torve AI",
+        "url": "https://github.com/Torve-Ai/skills"
     },
     "metadata": {
-        "description": "NVIDIA plugin marketplace — install the curated NVIDIA plugins and skills from this catalog repo.",
+        "description": "Torve AI plugin marketplace — install curated agent skills from this catalog.",
         "version": "1.0.0"
     },
     "plugins": [

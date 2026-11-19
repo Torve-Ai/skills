@@ -9,13 +9,13 @@ Install skills with the `skills` CLI from the repository root source:
 
 ```bash
 # Browse available skills
-npx skills add nvidia/skills --list
+npx skills add Torve-Ai/skills --list
 
 # Install interactively
-npx skills add nvidia/skills
+npx skills add Torve-Ai/skills
 
 # Install one skill
-npx skills add nvidia/skills --skill cuopt-numerical-optimization-api-python
+npx skills add Torve-Ai/skills --skill cuopt-numerical-optimization-api-python
 ```
 
 See the repository [README](../README.md) for the full catalog, or [Advanced installation](../docs/advanced-install.md) for agent-specific and non-interactive installs.

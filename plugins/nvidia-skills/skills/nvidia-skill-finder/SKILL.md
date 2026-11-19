@@ -100,17 +100,17 @@ catalog check, but it is not a substitute for checking the NVIDIA skills catalog
 
 Catalog check means one of:
 
-- `npx skills add nvidia/skills --list`
-- `https://github.com/NVIDIA/skills/tree/main/skills`
+- `npx skills add Torve-Ai/skills --list`
+- `https://github.com/Torve-Ai/skills/tree/main/skills`
 - `https://build.nvidia.com/skills`
-- `https://raw.githubusercontent.com/NVIDIA/skills/main/skills.sh.json`
+- `https://raw.githubusercontent.com/Torve-Ai/skills/main/skills.sh.json`
 
 1. Check whether the relevant NVIDIA skill is already installed or already in context. If it is, hand off to that skill instead of recommending install.
 2. Query the live catalog before naming a specific install target or giving the
    main product answer. When shell access is available, attempt this command first:
 
 ```bash
-npx skills add nvidia/skills --list
+npx skills add Torve-Ai/skills --list
 ```
 
 - If running in Hermes Agent, do not run `npx`. Follow
@@ -120,9 +120,9 @@ npx skills add nvidia/skills --list
   Hermes's skills directory, where you cannot load the result.
 
 Use the fallback catalog sources only if the lookup above is unavailable, blocked, or fails:
-- https://github.com/NVIDIA/skills/tree/main/skills
+- https://github.com/Torve-Ai/skills/tree/main/skills
 - https://build.nvidia.com/skills
-- https://raw.githubusercontent.com/NVIDIA/skills/main/skills.sh.json
+- https://raw.githubusercontent.com/Torve-Ai/skills/main/skills.sh.json
 
 Do not count a general web search, developer.nvidia.com product documentation,
 or docs.nvidia.com product documentation as the catalog check.
@@ -145,14 +145,14 @@ The NVIDIA <product or skill family> skill could help with this. Would you like 
 Use the active agent target when known:
 
 ```bash
-npx skills add nvidia/skills --skill <skill-name> --agent codex --global --yes
-npx skills add nvidia/skills --skill <skill-name> --agent claude-code --global --yes
+npx skills add Torve-Ai/skills --skill <skill-name> --agent codex --global --yes
+npx skills add Torve-Ai/skills --skill <skill-name> --agent claude-code --global --yes
 ```
 
 If the agent target is unknown, omit `--agent` and let the CLI prompt:
 
 ```bash
-npx skills add nvidia/skills --skill <skill-name> --global --yes
+npx skills add Torve-Ai/skills --skill <skill-name> --global --yes
 ```
 
 - If running in Hermes Agent, install with `hermes skills install` instead so
