@@ -1111,8 +1111,8 @@
       "name": "ethos-orchestrate",
       "path": "skills/ethos-orchestrate",
       "content_digest": "sha256:36c67cbce609eac9204be8b4ecac41393fd072879cbbbd2f89b0f4867c6fb070",
-      "last_commit": "3aecfe9ba84e4df15fa7b224987f2803c2ba70e7",
-      "last_modified": "2026-10-25"
+      "last_commit": "3a1b226c8a850c9ca586cb6021fd5a5c7227e73d",
+      "last_modified": "2026-11-20"
     },
     {
       "name": "ethos-write",
@@ -2133,8 +2133,8 @@
       "name": "nemotron-asr-finetune",
       "path": "skills/nemotron-asr-finetune",
       "content_digest": "sha256:73ac45ea58271b09cb419b4a75fa8b271f32966383e29be21c460609b4144743",
-      "last_commit": "a5a01eb1c6d8dc515a38060b019f7e19f9b0ef8f",
-      "last_modified": "2026-09-16"
+      "last_commit": "3a1b226c8a850c9ca586cb6021fd5a5c7227e73d",
+      "last_modified": "2026-11-20"
     },
     {
       "name": "nemotron-customize",
@@ -2378,8 +2378,8 @@
       "name": "nvidia-skill-finder",
       "path": "skills/nvidia-skill-finder",
       "content_digest": "sha256:63a07ba8ba0d12c9cb85c8a5dc4dabd52ec4fc56c7cb933a340aee85cb5724a2",
-      "last_commit": "7c3ee2281bfe47e12e31536355c1234060721e44",
-      "last_modified": "2026-11-10"
+      "last_commit": "3a1b226c8a850c9ca586cb6021fd5a5c7227e73d",
+      "last_modified": "2026-11-20"
     },
     {
       "name": "nvshmem-collect-performance-data",
